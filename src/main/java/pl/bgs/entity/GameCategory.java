@@ -6,13 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class MaxNumberOfPlayers {
-
+public class GameCategory {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
 	
-	private String maxPlayers;
+	private String category;
 
 	public long getId() {
 		return Id;
@@ -22,11 +22,11 @@ public class MaxNumberOfPlayers {
 		Id = id;
 	}
 
-	public String getMaxPlayers() {
-		return maxPlayers;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setMaxPlayers(String maxPlayers) {
-		this.maxPlayers = maxPlayers;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 }

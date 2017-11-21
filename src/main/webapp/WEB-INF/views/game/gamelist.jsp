@@ -21,8 +21,8 @@
 			<tr>
 				<td>${game.id}</td>
 				<td>${game.title}</td>
-				<td>${game.playTime}</td>
-				<td>${game.numOfPlayers}</td>
+				<td>${game.maxNumberOfPlayers}</td>
+				<td>${game.maxPlayTime}</td>
 				<td>${game.gameCategory}</td>
 				<td>${game.complexityRating}</td>
 				<td><a href="editgame?id=${game.id}">Edytuj grę</a></td>

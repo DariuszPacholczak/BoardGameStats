@@ -12,5 +12,22 @@ public class MaxPlayTime {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
 	
-	private int maxTime;
+	private String maxTime;
+
+	public long getId() {
+		return Id;
+	}
+
+	public void setId(long id) {
+		Id = id;
+	}
+
+	public String getMaxTime() {
+		return maxTime;
+	}
+
+	public void setMaxTime(String maxTime) {
+		this.maxTime = maxTime;
+	}
+	
 }

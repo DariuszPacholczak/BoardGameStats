@@ -16,15 +16,15 @@
 		</div>
 		<div>
 			Ilość graczy:
-			<f:input type="number" path="numOfPlayers" />
+			<f:select path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}" itemLabel="maxPlayers" />
 		</div>
 		<div>
 			Czas gry:
-			<f:input type="number" path="playTime" />
+			<f:select path="maxPlayTime" items="${MaxPlayTime}" itemLabel="maxTime" />
 		</div>
 		<div>
 			Kategoria gry:
-			<f:input path="gameCategory" />
+			<f:select path="gameCategory" items="${GameCategory}" itemLabel="category" />
 		</div>
 		<div>
 			Złożoność:

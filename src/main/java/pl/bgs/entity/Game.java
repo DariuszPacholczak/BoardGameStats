@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Game {
@@ -14,13 +15,16 @@ public class Game {
 
 	private String title;
 	
-	private int numOfPlayers;
+	@ManyToOne
+	private MaxNumberOfPlayers maxNumberOfPlayers;
 	
-	private int playTime;
+	@ManyToOne
+	private MaxPlayTime maxPlayTime;
+	
+	@ManyToOne
+	private GameCategory gameCategory;
 	
 	private double complexityRating;
-	
-	private String gameCategory;
 
 	public Long getId() {
 		return id;
@@ -38,20 +42,28 @@ public class Game {
 		this.title = title;
 	}
 
-	public int getNumOfPlayers() {
-		return numOfPlayers;
+	public MaxNumberOfPlayers getMaxNumberOfPlayers() {
+		return maxNumberOfPlayers;
 	}
 
-	public void setNumOfPlayers(int numOfPlayers) {
-		this.numOfPlayers = numOfPlayers;
+	public void setMaxNumberOfPlayers(MaxNumberOfPlayers maxNumberOfPlayers) {
+		this.maxNumberOfPlayers = maxNumberOfPlayers;
 	}
 
-	public int getPlayTime() {
-		return playTime;
+	public MaxPlayTime getMaxPlayTime() {
+		return maxPlayTime;
 	}
 
-	public void setPlayTime(int playTime) {
-		this.playTime = playTime;
+	public void setMaxPlayTime(MaxPlayTime maxPlayTime) {
+		this.maxPlayTime = maxPlayTime;
+	}
+
+	public GameCategory getGameCategory() {
+		return gameCategory;
+	}
+
+	public void setGameCategory(GameCategory gameCategory) {
+		this.gameCategory = gameCategory;
 	}
 
 	public double getComplexityRating() {
@@ -60,13 +72,5 @@ public class Game {
 
 	public void setComplexityRating(double complexityRating) {
 		this.complexityRating = complexityRating;
-	}
-
-	public String getGameCategory() {
-		return gameCategory;
-	}
-
-	public void setGameCategory(String gameCategory) {
-		this.gameCategory = gameCategory;
 	}
 }

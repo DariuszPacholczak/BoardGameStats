@@ -21,8 +21,6 @@ public class Game {
 	private double complexityRating;
 	
 	private String gameCategory;
-	
-//	private String gameMechanics;
 
 	public Long getId() {
 		return id;

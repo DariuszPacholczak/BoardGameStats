@@ -8,14 +8,14 @@
 <title>Board Game Stats</title>
 </head>
 <body>
-	<h1>Board Game Stats v0.0000000002 alfa</h1>
-	<a href="game/addGame">Dodaj grę</a>
+	<h1>Board Game Stats v0.0000000003 alfa</h1>
+	<a href="game/addgame">Dodaj grę</a>
 	</br> </br>
-	<a href="game/gameList">Lista gier</a>
+	<a href="game/gamelist">Lista gier</a>
 	</br> </br>
-	<a href="player/addPlayer">Dodaj gracza</a>
+	<a href="player/addplayer">Dodaj gracza</a>
 	</br> </br>
-	<a href="player/playerList">Lista graczy</a>
+	<a href="player/playerlist">Lista graczy</a>
 	</br> </br>
 </body>
 </html>

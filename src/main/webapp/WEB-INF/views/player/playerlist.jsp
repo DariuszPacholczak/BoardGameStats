@@ -20,10 +20,13 @@
 				<td>${player.id}</td>
 				<td>${player.firstName}</td>
 				<td>${player.lastName}</td>
-				<td><a href="edit?id=${player.id}">Edytuj gracza</a></td>
+				<td><a href="editplayer?id=${player.id}">Edytuj gracza</a></td>
+				<td><a href="remove?id=${player.id}">Usuń gracza</a></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="add">Dodaj nowego gracza</a>
+	<a href="addplayer">Dodaj nowego gracza</a>
+	</br></br>
+	<a href="../">Menu główne</a>
 </body>
 </html>

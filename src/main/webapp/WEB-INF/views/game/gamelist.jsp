@@ -21,14 +21,17 @@
 			<tr>
 				<td>${game.id}</td>
 				<td>${game.title}</td>
-				<td>${game.PlayTime}</td>
-				<td>${game.NumOfPlayers}</td>
-				<td>${game.ComplexityRating}</td>
-				<td>${game.GameCategory}</td>
-				<td><a href="edit?id=${game.id}">Edytuj grę</a></td>
+				<td>${game.playTime}</td>
+				<td>${game.numOfPlayers}</td>
+				<td>${game.complexityRating}</td>
+				<td>${game.gameCategory}</td>
+				<td><a href="editgame?id=${game.id}">Edytuj grę</a></td>
+				<td><a href="remove?id=${game.id}">Usuń grę</a></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="add">Dodaj nową grę</a>
+	<a href="addgame">Dodaj nową grę</a>
+	</br></br>
+	<a href="../">Menu główne</a>
 </body>
 </html>

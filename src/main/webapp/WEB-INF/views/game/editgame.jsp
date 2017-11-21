@@ -8,8 +8,8 @@
 <title>Edytuj grę</title>
 </head>
 <body>
-<body>
-	<f:form action="edit" method="post" modelAttribute="game">
+	<h2>Edytuj grę</h2>
+	<f:form action="editgame" method="post" modelAttribute="game">
 		<div>
 			Tytuł:
 			<f:input path="title" />
@@ -30,6 +30,7 @@
 			Kategoria gry:
 			<f:input path="gameCategory" />
 		</div>
+		<f:hidden path="id" />
 		<div>
 			<input type="submit" value="Zapisz grę" />
 		</div>

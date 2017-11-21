@@ -55,7 +55,7 @@ public class PlayerController {
 	}
 	
 	@RequestMapping("/player/remove")
-	public String deleteGame(@PathVariable(name = "id", required = true) long id) {
+	public String deleteGame(@RequestParam(name = "id", required = true) long id) {
 		Player player = playerRepository.findOne(id);
 		playerRepository.delete(player);
 		return "redirect:playerlist";

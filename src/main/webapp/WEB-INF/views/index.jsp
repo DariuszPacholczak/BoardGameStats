@@ -12,7 +12,7 @@
 	<a href="game/addgame">Dodaj grę</a>
 	</br> </br>
 	<a href="game/gamelist">Lista gier</a>
-	</br> </br>
+	</br> </br> </br>
 	<a href="player/addplayer">Dodaj gracza</a>
 	</br> </br>
 	<a href="player/playerlist">Lista graczy</a>

@@ -23,12 +23,12 @@
 			<f:input type="number" path="playTime" />
 		</div>
 		<div>
-			Złożoność:
-			<f:input path="complexityRating" />
-		</div>
-		<div>
 			Kategoria gry:
 			<f:input path="gameCategory" />
+		</div>
+		<div>
+			Złożoność:
+			<f:input path="complexityRating" />
 		</div>
 		<f:hidden path="id" />
 		<div>

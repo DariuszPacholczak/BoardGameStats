@@ -8,7 +8,7 @@
 <title>Dodaj grę</title>
 </head>
 <body>
-	<f:form action="add" method="post" modelAttribute="player">
+	<f:form action="add" method="post" modelAttribute="game">
 		<div>
 			Tytuł:
 			<f:input path="title" />

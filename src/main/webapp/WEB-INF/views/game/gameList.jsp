@@ -12,11 +12,10 @@
 		<tr>
 			<th>Id</th>
 			<th>Tytuł</th>
-			<th>Czas Gry</th>
 			<th>Liczba Graczy</th>
+			<th>Czas Gry</th>
 			<th>Złożoność gry</th>
 			<th>Kategoria Gry</th>
-			<th>Mechaniki</th>
 		</tr>
 		<c:forEach items="${games}" var="game">
 			<tr>
@@ -26,7 +25,6 @@
 				<td>${game.NumOfPlayers}</td>
 				<td>${game.ComplexityRating}</td>
 				<td>${game.GameCategory}</td>
-				<td>${game.GameMechanics}</td>
 				<td><a href="edit?id=${game.id}">Edytuj grę</a></td>
 			</tr>
 		</c:forEach>

@@ -8,21 +8,14 @@
 <title>Board Game Stats</title>
 </head>
 <body>
-	<h1>Board Game Stats v 0.00000000001 alfa</h1>
-	<f:form action="http://google.com">
-		<input type="submit" value="Dodaj Grę" />
-	</f:form>
-	</br>
-	<f:form action="http://google.com">
-		<input type="submit" value="Lista Gier" />
-	</f:form>
-	</br>
-	<f:form action="http://google.com">
-		<input type="submit" value="Dodaj Gracza" />
-	</f:form>
-	</br>
-	<f:form action="http://google.com">
-		<input type="submit" value="Statystyki Graczy" />
-	</f:form>
+	<h1>Board Game Stats v0.0000000002 alfa</h1>
+	<a href="game/addGame">Dodaj grę</a>
+	</br> </br>
+	<a href="game/gameList">Lista gier</a>
+	</br> </br>
+	<a href="player/addPlayer">Dodaj gracza</a>
+	</br> </br>
+	<a href="player/playerList">Lista graczy</a>
+	</br> </br>
 </body>
 </html>

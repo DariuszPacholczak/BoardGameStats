@@ -71,10 +71,4 @@ public class Game {
 	public void setGameCategory(String gameCategory) {
 		this.gameCategory = gameCategory;
 	}
-
-	@Override
-	public String toString() {
-		return "Game [id=" + id + ", title=" + title + ", numOfPlayers=" + numOfPlayers + ", playTime=" + playTime
-				+ ", complexityRating=" + complexityRating + ", gameCategory=" + gameCategory + "]";
-	}
 }

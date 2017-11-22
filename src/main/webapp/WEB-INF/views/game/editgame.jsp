@@ -16,15 +16,18 @@
 		</div>
 		<div>
 			Ilość graczy:
-			<f:select path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}" itemLabel="maxPlayers" />
+			<f:select itemValue="id" path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}"
+				itemLabel="maxPlayers" /><f:errors path="maxNumberOfPlayers" cssClass="error"/>
 		</div>
 		<div>
 			Czas gry:
-			<f:select path="maxPlayTime" items="${MaxPlayTime}" itemLabel="maxTime" />
+			<f:select itemValue="id" path="maxPlayTime" items="${MaxPlayTime}"
+				itemLabel="maxTime" /><f:errors path="maxPlayTime" cssClass="error"/>
 		</div>
 		<div>
 			Kategoria gry:
-			<f:select path="gameCategory" items="${GameCategory}" itemLabel="category" />
+			<f:select itemValue="id" path="gameCategory" items="${GameCategory}"
+				itemLabel="category" /><f:errors path="gameCategory" cssClass="error"/>
 		</div>
 		<div>
 			Złożoność:

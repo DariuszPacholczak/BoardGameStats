@@ -10,16 +10,16 @@ public class GameCategory {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+	private Long id;
 	
 	private String category;
 
-	public long getId() {
-		return Id;
+	public Long getId() {
+		return id;
 	}
 
-	public void setId(long id) {
-		Id = id;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getCategory() {

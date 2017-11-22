@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,7 +35,6 @@ public class GameController {
 	@Autowired
 	private GameCategoryRepository gameCategoryPlayersRepository;
 
-
 	@GetMapping(path = "/game/addgame")
 	public String showAddForm(Model model) {
 		model.addAttribute("game", new Game());
@@ -42,9 +42,13 @@ public class GameController {
 	}
 
 	@PostMapping(path = "/game/addgame")
-	public String addGame(@Valid Game game, Model model) {
-		gameRepository.save(game);
-		return "redirect:gamelist";
+	public String addGame(@Valid Game game, BindingResult bresult, Model model) {
+		if (bresult.hasErrors()) {
+			return "game/addgame";
+		} else {
+			gameRepository.save(game);
+			return "redirect:gamelist";
+		}
 	}
 
 	@GetMapping(path = "/game/gamelist")
@@ -78,12 +82,12 @@ public class GameController {
 	public List<MaxPlayTime> MaxPlayTime() {
 		return maxPlayTimeRepository.findAll();
 	}
-	
+
 	@ModelAttribute("MaxNumberOfPlayers")
 	public List<MaxNumberOfPlayers> MaxNumberOfPlayers() {
 		return maxNumberOfPlayersRepository.findAll();
 	}
-	
+
 	@ModelAttribute("GameCategory")
 	public List<GameCategory> GameCategory() {
 		return gameCategoryPlayersRepository.findAll();

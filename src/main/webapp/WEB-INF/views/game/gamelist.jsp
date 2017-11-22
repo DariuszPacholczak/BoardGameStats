@@ -21,9 +21,9 @@
 			<tr>
 				<td>${game.id}</td>
 				<td>${game.title}</td>
-				<td>${game.maxNumberOfPlayers}</td>
-				<td>${game.maxPlayTime}</td>
-				<td>${game.gameCategory}</td>
+				<td>${game.maxNumberOfPlayers.maxPlayers}</td>
+				<td>${game.maxPlayTime.maxTime}</td>
+				<td>${game.gameCategory.category}</td>
 				<td>${game.complexityRating}</td>
 				<td><a href="editgame?id=${game.id}">Edytuj grę</a></td>
 				<td><a href="remove?id=${game.id}">Usuń grę</a></td>
@@ -31,8 +31,6 @@
 		</c:forEach>
 	</table>
 	<a href="addgame">Dodaj nową grę</a>
-	</br>
-	</br>
 	<a href="../">Menu główne</a>
 </body>
 </html>

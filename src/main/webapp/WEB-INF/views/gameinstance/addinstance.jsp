@@ -5,39 +5,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Dodaj grę</title>
+<title>Dodaj rozgrywkę</title>
 </head>
 <body>
-	<h2>Dodaj Grę</h2>
-	<f:form action="addgame" method="post" modelAttribute="game">
+	<h2>Dodaj rozgrywkę</h2>
+	<f:form action="addinstance" method="post" modelAttribute="gameInstance">
 		<div>
 			<f:errors path="*" />
 		</div>
 		<div>
-			Tytuł:
-			<f:input path="title" /><f:errors path="title" cssClass="error"/>
+		Numer rozgrywki (ID)
 		</div>
 		<div>
-			Ilość graczy:
-			<f:select itemValue="id" path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}"
-				itemLabel="maxPlayers" /><f:errors path="maxNumberOfPlayers" cssClass="error"/>
+			Nazwa gry:
+			<f:select itemValue="id" path="game" items="${Game}"
+				itemLabel="title" /><f:errors path="game" cssClass="error"/>
 		</div>
 		<div>
-			Czas gry:
-			<f:select itemValue="id" path="maxPlayTime" items="${MaxPlayTime}"
-				itemLabel="maxTime" /><f:errors path="maxPlayTime" cssClass="error"/>
+			Data rozgrywki:
+			<f:input type="date" path="gameDate" /><f:errors path="gameDate" cssClass="error"/>
 		</div>
 		<div>
-			Kategoria gry:
-			<f:select itemValue="id" path="gameCategory" items="${GameCategory}"
-				itemLabel="category" /><f:errors path="gameCategory" cssClass="error"/>
+			Gracze: (z player in game)
+			<f:select itemValue="id" path="player" items="${Player}"
+				itemLabel="fullName" /><f:errors path="player" cssClass="error"/>
 		</div>
 		<div>
-			Złożoność:
-			<f:input path="complexityRating" /><f:errors path="complexityRating" cssClass="error"/>
-		</div>
-		<div>
-			<input type="submit" value="Dodaj grę" />
+			<input type="submit" value="Dodaj rozgrywkę" />
 		</div>
 	</f:form>
 </body>

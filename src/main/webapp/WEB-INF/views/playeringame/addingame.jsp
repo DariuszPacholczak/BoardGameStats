@@ -14,30 +14,21 @@
 			<f:errors path="*" />
 		</div>
 		<div>
-			Tytuł:
-			<f:input path="title" /><f:errors path="title" cssClass="error"/>
+			Gracz:
+			<f:select itemValue="id" path="player" items="${Player}"
+				itemLabel="fullName" /><f:errors path="player" cssClass="error"/>
 		</div>
 		<div>
-			Ilość graczy:
+			Punkty:
+			<f:input path="points" /><f:errors path="points" cssClass="error"/>
+		</div>
+		<div>
+			Rozgrywka: (chyba nie jest tu potrzebna)
 			<f:select itemValue="id" path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}"
 				itemLabel="maxPlayers" /><f:errors path="maxNumberOfPlayers" cssClass="error"/>
 		</div>
 		<div>
-			Czas gry:
-			<f:select itemValue="id" path="maxPlayTime" items="${MaxPlayTime}"
-				itemLabel="maxTime" /><f:errors path="maxPlayTime" cssClass="error"/>
-		</div>
-		<div>
-			Kategoria gry:
-			<f:select itemValue="id" path="gameCategory" items="${GameCategory}"
-				itemLabel="category" /><f:errors path="gameCategory" cssClass="error"/>
-		</div>
-		<div>
-			Złożoność:
-			<f:input path="complexityRating" /><f:errors path="complexityRating" cssClass="error"/>
-		</div>
-		<div>
-			<input type="submit" value="Dodaj grę" />
+			<input type="submit" value="Dodaj do gry" />
 		</div>
 	</f:form>
 </body>

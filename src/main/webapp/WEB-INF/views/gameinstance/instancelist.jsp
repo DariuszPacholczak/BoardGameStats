@@ -11,26 +11,22 @@
 	<table>
 		<tr>
 			<th>Id</th>
-			<th>Tytuł</th>
-			<th>Liczba Graczy</th>
-			<th>Czas Gry</th>
-			<th>Kategoria Gry</th>
-			<th>Złożoność gry</th>
+			<th>Nazwa gry</th>
+			<th>Gracze</th>
+			<th>Data rozgrywki</th>
 		</tr>
-		<c:forEach items="${games}" var="game">
+		<c:forEach items="${gameInstances}" var="gameInstance">
 			<tr>
-				<td>${game.id}</td>
-				<td>${game.title}</td>
-				<td>${game.maxNumberOfPlayers.maxPlayers}</td>
-				<td>${game.maxPlayTime.maxTime}</td>
-				<td>${game.gameCategory.category}</td>
-				<td>${game.complexityRating}</td>
-				<td><a href="editgame?id=${game.id}">Edytuj grę</a></td>
-				<td><a href="remove?id=${game.id}">Usuń grę</a></td>
+				<td>${gameInstance.id}</td>
+				<td>${gameInstance.game.title}</td>
+				<td>${gameInstance.player.fullName}</td>
+				<td>${gameInstance.gameDate}</td>
+				<td><a href="editgame?id=${gameInstance.id}">Edytuj grę</a></td>
+				<td><a href="remove?id=${gameInstance.id}">Usuń grę</a></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="addgame">Dodaj nową grę</a>
+	<a href="addinstance">Dodaj nową grę</a>
 	<a href="../">Menu główne</a>
 </body>
 </html>

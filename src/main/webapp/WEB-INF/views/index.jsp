@@ -8,7 +8,7 @@
 <title>Board Game Stats</title>
 </head>
 <body>
-	<h1>Board Game Stats v0.0000000005 alfa</h1>
+	<h1>Board Game Stats v0.0000000006 alfa</h1>
 	<a href="game/addgame">Dodaj grę</a>
 	</br> </br>
 	<a href="game/gamelist">Lista gier</a>
@@ -16,6 +16,10 @@
 	<a href="player/addplayer">Dodaj gracza</a>
 	</br> </br>
 	<a href="player/playerlist">Lista graczy</a>
+	</br> </br> </br>
+	<a href="gameinstance/addinstance">Dodaj rozgrywkę</a>
+	</br> </br>
+	<a href="gameinstance/instancelist">Lista rozgrywek</a>
 	</br> </br>
 </body>
 </html>

@@ -5,37 +5,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Edytuj grę</title>
+<title>Edytuj rozgrywkę</title>
 </head>
 <body>
-	<h2>Edytuj grę</h2>
-	<f:form action="editgame" method="post" modelAttribute="game">
+	<h2>Edytuj rozgrywkę</h2>
+	<f:form action="editinstance" method="post" modelAttribute="gameInstance">
 		<div>
-			Tytuł:
-			<f:input path="title" />
+			Nazwa gry:
+			<f:select itemValue="id" path="game" items="${Game}"
+				itemLabel="title" />
 		</div>
 		<div>
-			Ilość graczy:
-			<f:select itemValue="id" path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}"
-				itemLabel="maxPlayers" /><f:errors path="maxNumberOfPlayers" cssClass="error"/>
+			Gracze:
+			<f:select itemValue="id" path="player" items="${Player}"
+				itemLabel="fullName" />
 		</div>
 		<div>
-			Czas gry:
-			<f:select itemValue="id" path="maxPlayTime" items="${MaxPlayTime}"
-				itemLabel="maxTime" /><f:errors path="maxPlayTime" cssClass="error"/>
+			Data rozgrywki:
+			<f:input type="date" path="gameDate" />
 		</div>
 		<div>
-			Kategoria gry:
-			<f:select itemValue="id" path="gameCategory" items="${GameCategory}"
-				itemLabel="category" /><f:errors path="gameCategory" cssClass="error"/>
-		</div>
-		<div>
-			Złożoność:
-			<f:input path="complexityRating" />
-		</div>
-		<f:hidden path="id" />
-		<div>
-			<input type="submit" value="Zapisz grę" />
+			<input type="submit" value="Edytuj rozgrywkę" />
 		</div>
 	</f:form>
 </body>

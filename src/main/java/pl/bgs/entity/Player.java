@@ -15,6 +15,10 @@ public class Player {
 	private String firstName;
 	
 	private String lastName;
+	
+	public String fullName () {
+		return firstName + " " + lastName;
+	}
 
 	public Long getId() {
 		return id;

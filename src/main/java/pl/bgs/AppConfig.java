@@ -22,8 +22,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import pl.bgs.converter.GameCategoryConverter;
+import pl.bgs.converter.GameConverter;
+import pl.bgs.converter.GameInstanceConverter;
 import pl.bgs.converter.MaxNumberOfPlayersConverter;
 import pl.bgs.converter.MaxPlayTimeConverter;
+import pl.bgs.converter.PlayerConverter;
+import pl.bgs.converter.PlayerInGameConverter;
 
 @Configuration
 @EnableWebMvc
@@ -72,6 +76,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(getMaxNumberOfPlayersConverter());
 		registry.addConverter(getMaxPlayTimeConverter());
 		registry.addConverter(getGameCategoryConverter());
+		registry.addConverter(getPlayerInGameConverter());
+		registry.addConverter(getGameConverter());
+		registry.addConverter(getGameInstanceConverter());
+		registry.addConverter(getPlayerConverter());
 	}
 	
 	@Bean
@@ -87,5 +95,25 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public GameCategoryConverter getGameCategoryConverter() {
 		return new GameCategoryConverter();
+	}
+	
+	@Bean
+	public PlayerInGameConverter getPlayerInGameConverter() {
+		return new PlayerInGameConverter();
+	}
+	
+	@Bean
+	public GameConverter getGameConverter() {
+		return new GameConverter();
+	}
+	
+	@Bean
+	public GameInstanceConverter getGameInstanceConverter() {
+		return new GameInstanceConverter();
+	}
+	
+	@Bean
+	public PlayerConverter getPlayerConverter() {
+		return new PlayerConverter();
 	}
 }

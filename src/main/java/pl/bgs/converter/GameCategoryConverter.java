@@ -9,7 +9,7 @@ import pl.bgs.repository.GameCategoryRepository;
 public class GameCategoryConverter implements Converter<String, GameCategory>{
 
     @Autowired
-    private  GameCategoryRepository gameCategoryRepository;
+    private GameCategoryRepository gameCategoryRepository;
     
     public GameCategory convert(String source) {
     	return gameCategoryRepository.findOne(Long.parseLong(source));

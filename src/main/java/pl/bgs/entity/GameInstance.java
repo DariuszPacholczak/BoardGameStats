@@ -1,12 +1,15 @@
 package pl.bgs.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Entity
 public class GameInstance {
@@ -15,7 +18,8 @@ public class GameInstance {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private Date gameDate;
+	@DateTimeFormat(iso = ISO.DATE)
+	private LocalDate gameDate;
 	
 	@ManyToOne
 	private Game game;
@@ -31,11 +35,11 @@ public class GameInstance {
 		this.id = id;
 	}
 
-	public Date getGameDate() {
+	public LocalDate getGameDate() {
 		return gameDate;
 	}
 
-	public void setGameDate(Date gameDate) {
+	public void setGameDate(LocalDate gameDate) {
 		this.gameDate = gameDate;
 	}
 
@@ -52,14 +56,6 @@ public class GameInstance {
 	}
 
 	public void setPlayerInGame(PlayerInGame playerInGame) {
-		this.playerInGame = playerInGame;
-	}
-
-	public GameInstance(Long id, Date gameDate, Game game, PlayerInGame playerInGame) {
-		super();
-		this.id = id;
-		this.gameDate = gameDate;
-		this.game = game;
 		this.playerInGame = playerInGame;
 	}
 }

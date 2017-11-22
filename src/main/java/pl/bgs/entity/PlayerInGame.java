@@ -1,14 +1,10 @@
 package pl.bgs.entity;
 
-import java.time.LocalDate;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class PlayerInGame {
@@ -18,15 +14,13 @@ public class PlayerInGame {
 	private Long id;
 
 	private int points;
+	
 	@ManyToOne
-	GameInstance gameInstance;
+	private GameInstance gameInstance;
 
 	@ManyToOne
-	Player player;
-	
-//	@DateTimeFormat()
-//	LocalDate created;
-	
+	private Player player;
+
 	public Long getId() {
 		return id;
 	}
@@ -58,5 +52,4 @@ public class PlayerInGame {
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
-
 }

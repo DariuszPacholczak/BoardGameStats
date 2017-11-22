@@ -8,7 +8,7 @@
 <title>Board Game Stats</title>
 </head>
 <body>
-	<h1>Board Game Stats v0.0000000003 alfa</h1>
+	<h1>Board Game Stats v0.0000000004 alfa</h1>
 	<a href="game/addgame">Dodaj grę</a>
 	</br> </br>
 	<a href="game/gamelist">Lista gier</a>

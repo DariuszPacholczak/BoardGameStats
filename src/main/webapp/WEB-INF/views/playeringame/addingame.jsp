@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Dodaj grę</title>
+<title>Dodaj graczy do gry</title>
 </head>
 <body>
-	<h2>Dodaj Grę</h2>
-	<f:form action="addgame" method="post" modelAttribute="game">
+	<h2>Dodaj graczy do gry</h2>
+	<f:form action="addingame" method="post" modelAttribute="playerInGame">
 		<div>
 			<f:errors path="*" />
 		</div>
@@ -20,12 +20,7 @@
 		</div>
 		<div>
 			Punkty:
-			<f:input path="points" /><f:errors path="points" cssClass="error"/>
-		</div>
-		<div>
-			Rozgrywka: (chyba nie jest tu potrzebna)
-			<f:select itemValue="id" path="maxNumberOfPlayers" items="${MaxNumberOfPlayers}"
-				itemLabel="maxPlayers" /><f:errors path="maxNumberOfPlayers" cssClass="error"/>
+			<f:input type="number" path="points" /><f:errors path="points" cssClass="error"/>
 		</div>
 		<div>
 			<input type="submit" value="Dodaj do gry" />

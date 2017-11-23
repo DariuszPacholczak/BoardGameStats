@@ -14,9 +14,6 @@
 			<f:errors path="*" />
 		</div>
 		<div>
-		Numer rozgrywki (ID)
-		</div>
-		<div>
 			Nazwa gry:
 			<f:select itemValue="id" path="game" items="${Game}"
 				itemLabel="title" /><f:errors path="game" cssClass="error"/>
@@ -24,11 +21,6 @@
 		<div>
 			Data rozgrywki:
 			<f:input type="date" path="gameDate" /><f:errors path="gameDate" cssClass="error"/>
-		</div>
-		<div>
-			Gracze: (z player in game)
-			<f:select itemValue="id" path="player" items="${Player}"
-				itemLabel="fullName" /><f:errors path="player" cssClass="error"/>
 		</div>
 		<div>
 			<input type="submit" value="Dodaj rozgrywkę" />

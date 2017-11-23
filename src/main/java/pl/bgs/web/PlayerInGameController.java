@@ -63,7 +63,7 @@ public class PlayerInGameController {
 		return "playeringame/editingame";
 	}
 
-	@PostMapping(path = "/playeringame/editgame")
+	@PostMapping(path = "/playeringame/editingame")
 	public String editPlayerInGame(@Valid PlayerInGame playerInGame) {
 		playerInGameRepository.save(playerInGame);
 		return "redirect:ingamelist";

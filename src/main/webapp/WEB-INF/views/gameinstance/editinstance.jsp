@@ -9,16 +9,12 @@
 </head>
 <body>
 	<h2>Edytuj rozgrywkę</h2>
-	<f:form action="editinstance" method="post" modelAttribute="gameInstance">
+	<f:form action="editinstance" method="post"
+		modelAttribute="gameInstance">
 		<div>
 			Nazwa gry:
 			<f:select itemValue="id" path="game" items="${Game}"
 				itemLabel="title" />
-		</div>
-		<div>
-			Gracze:
-			<f:select itemValue="id" path="player" items="${Player}"
-				itemLabel="fullName" />
 		</div>
 		<div>
 			Data rozgrywki:

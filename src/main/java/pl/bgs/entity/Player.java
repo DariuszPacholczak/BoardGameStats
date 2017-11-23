@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Player {
@@ -15,9 +16,16 @@ public class Player {
 	private String firstName;
 	
 	private String lastName;
+	@Transient
+	public String fullName;
 	
-	public String fullName () {
+
+	public String getFullName() {
 		return firstName + " " + lastName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public Long getId() {

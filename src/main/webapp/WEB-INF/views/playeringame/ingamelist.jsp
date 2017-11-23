@@ -1,36 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lista gier</title>
+<title>Lista graczy w grze</title>
 </head>
 <body>
-	<h2>Lista gier</h2>
+	<h2>Lista graczy w grze</h2>
 	<table>
 		<tr>
-			<th>Id</th>
-			<th>Tytuł</th>
-			<th>Liczba Graczy</th>
-			<th>Czas Gry</th>
-			<th>Kategoria Gry</th>
-			<th>Złożoność gry</th>
+			<th>Gracz</th>
+			<th>Punkty</th>
 		</tr>
-		<c:forEach items="${games}" var="game">
+		<c:forEach items="${playerInGames}" var="playerInGame">
 			<tr>
-				<td>${game.id}</td>
-				<td>${game.title}</td>
-				<td>${game.maxNumberOfPlayers.maxPlayers}</td>
-				<td>${game.maxPlayTime.maxTime}</td>
-				<td>${game.gameCategory.category}</td>
-				<td>${game.complexityRating}</td>
-				<td><a href="editgame?id=${game.id}">Edytuj grę</a></td>
-				<td><a href="remove?id=${game.id}">Usuń grę</a></td>
+				<td>${playerInGame.fullName()}</td>
+				<td>${playerInGame.points}</td>
+				<td><a href="editingame?id=${playerInGame.id}">Edytuj</a></td>
+				<td><a href="remove?id=${playerInGame.id}">Usuń</a></td>
+				<td><f:select itemValue="id" path="gameInstance" items="${Player}" itemLabel="fullName" /></td>
+				<td><a href="=${playerInGame.id}">Przypisz</a></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="addgame">Dodaj nową grę</a>
+	<a href="addingame">Dodaj</a>
 	<a href="../">Menu główne</a>
 </body>
 </html>

@@ -11,9 +11,6 @@
 	<h2>Dodaj rozgrywkę</h2>
 	<f:form action="addinstance" method="post" modelAttribute="gameInstance">
 		<div>
-			<f:errors path="*" />
-		</div>
-		<div>
 			Nazwa gry:
 			<f:select itemValue="id" path="game" items="${Game}"
 				itemLabel="title" /><f:errors path="game" cssClass="error"/>
@@ -26,5 +23,7 @@
 			<input type="submit" value="Dodaj rozgrywkę" />
 		</div>
 	</f:form>
+	</br>
+	<a href="../">Menu główne</a>
 </body>
 </html>

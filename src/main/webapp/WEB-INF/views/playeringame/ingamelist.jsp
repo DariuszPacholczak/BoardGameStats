@@ -23,7 +23,7 @@
 		</c:forEach>
 	</table>
 	</br>
-	<a href="addingame?id=${playerInGame.id}">Dodaj gracza</a>
+	<a href="addingame?id=${gameInstanceId}">Dodaj gracza</a>
 	</br></br>
 	<a href="../gameinstance/instancelist">Lista rozgrywek</a>
 	</br></br>

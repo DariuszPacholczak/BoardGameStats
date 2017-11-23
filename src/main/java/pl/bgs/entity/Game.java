@@ -5,6 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Game {
@@ -13,6 +17,7 @@ public class Game {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@NotEmpty
 	private String title;
 	
 	@ManyToOne
@@ -24,6 +29,8 @@ public class Game {
 	@ManyToOne
 	private GameCategory gameCategory;
 	
+	@Min(value = 1)
+	@Max(value = 5)
 	private double complexityRating;
 
 	public Long getId() {

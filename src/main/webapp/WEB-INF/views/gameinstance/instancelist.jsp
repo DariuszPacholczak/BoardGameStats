@@ -25,6 +25,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</br>
 	<a href="../">Menu główne</a>
 </body>
 </html>

@@ -12,15 +12,17 @@
 	<f:form action="addplayer" method="post" modelAttribute="player">
 		<div>
 			Imię:
-			<f:input path="firstName" />
+			<f:input path="firstName" /><f:errors path="firstName" cssClass="error"/>
 		</div>
 		<div>
 			Nazwisko:
-			<f:input path="lastName" />
+			<f:input path="lastName" /><f:errors path="lastName" cssClass="error"/>
 		</div>
 		<div>
 			<input type="submit" value="Dodaj gracza" />
 		</div>
 	</f:form>
+	</br>
+	<a href="../">Menu główne</a>
 </body>
 </html>

@@ -19,9 +19,10 @@
 			Punkty:
 			<f:input type="number" path="points" />
 		</div>
-		<f:hidden path="id" />
+		<f:hidden path="id" value="${playerInGame.id}" />
+		<f:hidden path="gameInstance.id" />
 		<div>
-			<input type="submit" value="Zapisz graczy do gry" />
+			<input type="submit" value="Zapisz zmiany" />
 		</div>
 	</f:form>
 </body>

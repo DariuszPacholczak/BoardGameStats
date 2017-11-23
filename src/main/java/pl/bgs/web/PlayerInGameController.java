@@ -34,9 +34,9 @@ public class PlayerInGameController {
 	private PlayerRepository playerRepository;
 
 	@GetMapping(path = "/playeringame/addingame")
-	public String showAddForm(@RequestParam(name = "id", required = true) long id, Model model) { 
+	public String showAddForm(@RequestParam(name = "id", required = true) long id, Model model) {
 		model.addAttribute("playerInGame", new PlayerInGame());
-		model.addAttribute("gameInstanceId", id);				//aaaaaaaaaaaaaa
+		model.addAttribute("gameInstanceId", id);
 		return "playeringame/addingame";
 	}
 
@@ -46,7 +46,7 @@ public class PlayerInGameController {
 			return "playeringame/addingame";
 		} else {
 			playerInGameRepository.save(playerInGame);
-			return "redirect:ingamelist";
+			return "redirect:ingamelist?id="+playerInGame.getGameInstance().getId(); //?id=1
 		}
 	}
 
@@ -54,7 +54,7 @@ public class PlayerInGameController {
 	public String showAllPlayersInGame(@RequestParam(name = "id", required = true) long id, Model model) {
 		List<PlayerInGame> playerInGames = playerInGameRepository.findByGameInstanceId(id);
 		model.addAttribute("playerInGames", playerInGames); 		
-		model.addAttribute("gameInstanceId", id);				//aaaaaaaaaaaaaaaa
+		model.addAttribute("gameInstanceId", id);
 		return "playeringame/ingamelist";
 	}
 
@@ -68,14 +68,14 @@ public class PlayerInGameController {
 	@PostMapping(path = "/playeringame/editingame")
 	public String editPlayerInGame(@Valid PlayerInGame playerInGame) {
 		playerInGameRepository.save(playerInGame);
-		return "redirect:ingamelist";
+		return "redirect:ingamelist?id="+playerInGame.getGameInstance().getId();
 	}
 
 	@RequestMapping("/playeringame/remove")
 	public String deletePlayerInGame(@RequestParam(name = "id", required = true) long id) {
 		PlayerInGame playerInGame = playerInGameRepository.findOne(id);
 		playerInGameRepository.delete(playerInGame);
-		return "redirect:ingamelist";
+		return "redirect:ingamelist?id="+playerInGame.getGameInstance().getId();
 	}
 	
 	@ModelAttribute("GameInstance")

@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Player {
 	
@@ -13,13 +15,15 @@ public class Player {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotEmpty
 	private String firstName;
 	
+	@NotEmpty
 	private String lastName;
+	
 	@Transient
 	public String fullName;
 	
-
 	public String getFullName() {
 		return firstName + " " + lastName;
 	}

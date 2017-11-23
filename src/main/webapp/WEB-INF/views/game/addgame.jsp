@@ -11,9 +11,6 @@
 	<h2>Dodaj Grę</h2>
 	<f:form action="addgame" method="post" modelAttribute="game">
 		<div>
-			<f:errors path="*" />
-		</div>
-		<div>
 			Tytuł:
 			<f:input path="title" /><f:errors path="title" cssClass="error"/>
 		</div>
@@ -40,5 +37,7 @@
 			<input type="submit" value="Dodaj grę" />
 		</div>
 	</f:form>
+	</br>
+	<a href="../">Menu główne</a>
 </body>
 </html>

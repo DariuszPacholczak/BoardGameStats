@@ -16,16 +16,21 @@
 		<div>
 			Gracz:
 			<f:select itemValue="id" path="player" items="${Player}"
-				itemLabel="fullName" /><f:errors path="player" cssClass="error"/>
+				itemLabel="fullName" />
+			<f:errors path="player" cssClass="error" />
 		</div>
 		<div>
 			Punkty:
-			<f:input type="number" path="points" /><f:errors path="points" cssClass="error"/>
+			<f:input type="number" path="points" />
+			<f:errors path="points" cssClass="error" />
 		</div>
-		<f:hidden path="id" value="${gameInstanceId}" />
+		<f:hidden path="id" value="${playerInGame.id}" />
+		<input type="hidden" name="gameInstance" value="${gameInstanceId }" />
 		<div>
 			<input type="submit" value="Dodaj do gry" />
 		</div>
 	</f:form>
+	</br>
+	<a href="../">Menu główne</a>
 </body>
 </html>

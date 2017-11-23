@@ -20,8 +20,9 @@
 			Data rozgrywki:
 			<f:input type="date" path="gameDate" />
 		</div>
+		<f:hidden path="id" />
 		<div>
-			<input type="submit" value="Edytuj rozgrywkę" />
+			<input type="submit" value="Zapisz zmiany" />
 		</div>
 	</f:form>
 </body>

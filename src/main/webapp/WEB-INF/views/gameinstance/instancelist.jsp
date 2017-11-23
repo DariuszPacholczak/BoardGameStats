@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Rozgrywka</title>
+<title>Lista Rozgrywek</title>
 </head>
 <body>
-	<h2>Rozgrywka</h2>
+	<h2>Lista Rozgrywek</h2>
 	<table>
 		<tr>
 			<th>Id</th>
@@ -16,13 +16,12 @@
 		</tr>
 		<c:forEach items="${gameInstances}" var="gameInstance">
 			<tr>
-			<tr>
 				<td>${gameInstance.id}</td>
 				<td>${gameInstance.game.title}</td>
 				<td>${gameInstance.gameDate}</td>
 				<td><a href="editinstance?id=${gameInstance.id}">Edytuj</a></td>
 				<td><a href="remove?id=${gameInstance.id}">Usuń</a></td>
-				<td><a href="../playeringame/ingamelist">Szczegóły</a></td>
+				<td><a href="../playeringame/ingamelist?id=${gameInstance.id}">Szczegóły</a></td>
 			</tr>
 		</c:forEach>
 	</table>

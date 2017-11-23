@@ -30,7 +30,9 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</br>
 	<a href="addgame">Dodaj nową grę</a>
+	</br></br>
 	<a href="../">Menu główne</a>
 </body>
 </html>

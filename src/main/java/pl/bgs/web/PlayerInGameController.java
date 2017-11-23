@@ -34,8 +34,9 @@ public class PlayerInGameController {
 	private PlayerRepository playerRepository;
 
 	@GetMapping(path = "/playeringame/addingame")
-	public String showAddForm(Model model) {
+	public String showAddForm(@RequestParam(name = "id", required = true) long id, Model model) { 
 		model.addAttribute("playerInGame", new PlayerInGame());
+		model.addAttribute("gameInstanceId", id);				//aaaaaaaaaaaaaa
 		return "playeringame/addingame";
 	}
 
@@ -50,9 +51,10 @@ public class PlayerInGameController {
 	}
 
 	@GetMapping(path = "/playeringame/ingamelist")
-	public String showAllPlayersInGame(Model model) {
-		List<PlayerInGame> playerInGames = playerInGameRepository.findAll();
-		model.addAttribute("playerInGames", playerInGames);
+	public String showAllPlayersInGame(@RequestParam(name = "id", required = true) long id, Model model) {
+		List<PlayerInGame> playerInGames = playerInGameRepository.findByGameInstanceId(id);
+		model.addAttribute("playerInGames", playerInGames); 		
+		model.addAttribute("gameInstanceId", id);				//aaaaaaaaaaaaaaaa
 		return "playeringame/ingamelist";
 	}
 

@@ -22,6 +22,7 @@
 			Punkty:
 			<f:input type="number" path="points" /><f:errors path="points" cssClass="error"/>
 		</div>
+		<f:hidden path="id" value="${gameInstanceId}" />
 		<div>
 			<input type="submit" value="Dodaj do gry" />
 		</div>

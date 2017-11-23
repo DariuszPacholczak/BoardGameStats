@@ -25,6 +25,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</br>
 	<a href="addplayer">Dodaj nowego gracza</a>
 	</br></br>
 	<a href="../">Menu główne</a>
